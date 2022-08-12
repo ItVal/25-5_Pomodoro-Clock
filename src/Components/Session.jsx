@@ -1,3 +1,6 @@
+import { BsFillArrowDownSquareFill } from 'react-icons/bs';
+import { BsFillArrowUpSquareFill } from 'react-icons/bs';
+
 import moment from "moment";
 import React from "react";
 
@@ -16,9 +19,11 @@ const Session = ({
     return (
         <div>
             <p id="session-label">Session Length</p>
+            <div className='btn-style-session'> 
+            <i id="session-decrement" onClick={decrementSessionLengthByOneMinute}><BsFillArrowUpSquareFill /></i>
             <p id="session-length">{sessionLengthInMinutes}</p>
-            <button id="session-increment" onClick={incrementSessionLengthByOneMinute}>+</button>
-            <button id="session-decrement" onClick={decrementSessionLengthByOneMinute}>-</button>
+            <i id="session-increment" onClick={incrementSessionLengthByOneMinute}><BsFillArrowDownSquareFill /></i>
+            </div> 
         </div>
     );
 };

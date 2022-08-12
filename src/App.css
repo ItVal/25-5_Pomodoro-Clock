@@ -1,12 +1,87 @@
+
+body{
+  background-color: #1e555c;
+  color: white;
+  font-weight: bold;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 70px;
+
+}
+
 .App {
   text-align: center;
+}
+h1{
+  font-size: 50px;
+ 
+}
+h2{
+  font-size: 30px;
 }
 
 .break-session{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap : 20px;
+  gap : 60px;
+}
+.break{
+  border: 8px solid #13353a;
+  border-radius: 20px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.session{
+  border: 8px solid #13353a;
+  border-radius: 20px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.timer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #13353a;
+  border-radius: 20px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px
+
+}
+#break-label{
+  font-size: 30px;
+}
+#session-label{
+  font-size: 30px;
+}
+/* bouton d'incrementation et décrementation */
+#break-decrement{
+  font-size: 50px;
+}
+#break-increment{
+  font-size: 50px;
+}
+
+#session-decrement{
+  font-size: 50px;
+}
+#session-increment{
+  font-size: 50px;
+}
+
+/* valeur de la durée par défaut */
+#break-length{
+  font-size: 30px;
+}
+#session-length{
+  font-size: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,19 +101,20 @@
   color: white;
 }
 
-.timer{
+.btn-style-break{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
- 
-  border: 2px solid red;
-  border-radius: 20px;
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-
+  gap: 20px;
 }
+
+.btn-style-session{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .App-link {
   color: #61dafb;
 }

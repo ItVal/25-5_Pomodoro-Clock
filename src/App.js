@@ -59,7 +59,7 @@ const incrementBreakLengthByOneMinute = () =>
       decrementBreakLengthByOneMinute = {decrementBreakLengthByOneMinute}
       />
       {/* importation du composant TimeLeft */}
-      <TimeLeft />
+      <TimeLeft sessionLengthInSeconds={sessionLengthInSeconds} />
 
 
       {/* import de notre composant session avec l'accesoire props */}

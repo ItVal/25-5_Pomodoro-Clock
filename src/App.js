@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Break from './Components/Break';
 import Session from './Components/Session';
+import TimeLeft from './Components/TimeLeft';
 
 function App() {
      // initialisation de la durée de la pause à l'aide de react state (et useState)
@@ -57,6 +58,9 @@ const incrementBreakLengthByOneMinute = () =>
       incrementBreakLengthByOneMinute = {incrementBreakLengthByOneMinute}
       decrementBreakLengthByOneMinute = {decrementBreakLengthByOneMinute}
       />
+      {/* importation du composant TimeLeft */}
+      <TimeLeft />
+
 
       {/* import de notre composant session avec l'accesoire props */}
       <Session 

@@ -15,7 +15,7 @@ const Break = ({
    const breakLengthInMinutes = moment.duration(breakLengthInSeconds, "s").minutes(); 
 return (
     <div>
-        <p id="break-label">Break</p>
+        <p id="break-label">Break Length</p>
         <p id="break-length">{breakLengthInMinutes}</p>
         <button id="break-increment" onClick={incrementBreakLengthByOneMinute}>+</button>
         <button id="break-decrement" onClick={decrementBreakLengthByOneMinute}>-</button>

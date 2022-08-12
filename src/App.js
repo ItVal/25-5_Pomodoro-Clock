@@ -5,6 +5,7 @@ import Session from './Components/Session';
 import TimeLeft from './Components/TimeLeft';
 
 function App() {
+
      // initialisation de la durée de la pause à l'aide de react state (et useState)
      const [sessionLengthInSeconds, setSessionLengthInSeconds] = useState(1500);
 // ajout bouton plus et moins avec des gestionnaires d'événements de clic
@@ -51,24 +52,33 @@ const incrementBreakLengthByOneMinute = () =>
   
   return (
     <div className="App">
-
+      <h1>25 + 5 Clock</h1>
        {/* import de notre composant break avec l'accesoire props */}
+       <div className='break-session'>
+        <div className="break">
       <Break 
-      setBreakLengthInSeconds = {setBreakLengthInSeconds}
+      breakLengthInSeconds = {breakLengthInSeconds}
       incrementBreakLengthByOneMinute = {incrementBreakLengthByOneMinute}
       decrementBreakLengthByOneMinute = {decrementBreakLengthByOneMinute}
       />
+      </div>
       {/* importation du composant TimeLeft */}
-      <TimeLeft sessionLengthInSeconds={sessionLengthInSeconds} />
+     
 
-
+      <div className="session">
       {/* import de notre composant session avec l'accesoire props */}
       <Session 
-        setSessionLengthInSeconds = {setSessionLengthInSeconds}
+        sessionLengthInSeconds = {sessionLengthInSeconds}
         incrementSessionLengthByOneMinute = {incrementSessionLengthByOneMinute}
         decrementSessionLengthByOneMinute = {decrementSessionLengthByOneMinute}
       
       />
+      </div>
+    </div>
+    <div className='timer'> 
+      <h2>Session</h2>
+      <TimeLeft sessionLengthInSeconds={sessionLengthInSeconds} />
+     </div>
     </div>
   );
 }

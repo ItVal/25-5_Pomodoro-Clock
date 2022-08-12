@@ -30,6 +30,8 @@ return (
     <div>
         <p id="break-label">Break</p>
         <p id="break-length">{breakLengthInSeconds}</p>
+        <button id="break-increment" onClick={incrementBreakLengthByOneMinute}>+</button>
+        <button id="break-decrement" onClick={decrementBreakLengthByOneMinute}>-</button>
     </div>
 );
 };

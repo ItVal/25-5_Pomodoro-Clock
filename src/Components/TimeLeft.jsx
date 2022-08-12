@@ -1,16 +1,15 @@
-
 import moment from 'moment';
 import momentDurationFormatSetup from 'moment-duration-format';
-import React from 'react'
-import {useState} from 'react'
+import React from 'react';
+import { useState } from 'react';
 
-// branchement du plugin moment duration pour le format mm:ss
 momentDurationFormatSetup(moment);
 
-function TimeLeft ({sessionLengthInSeconds}){
-    const [timeLeft] = useState(sessionLengthInSeconds)
+const TimeLeft = ({ sessionLengthInSeconds }) => {
+  const [timeLeft] = useState(sessionLengthInSeconds);
 
-    return <p id="time-left">{timeLeft}</p>
-}
+  const formattedTimeLeft = moment.duration(timeLeft, 's').format('mm:ss');
+  return <p id="time-left">{formattedTimeLeft}</p>;
+};
 
-export default TimeLeft
+export default TimeLeft;

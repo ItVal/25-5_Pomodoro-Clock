@@ -13,8 +13,6 @@ const Break = ({
 
 }) => {
     
-
-
     // conversion secondes en minutes à l'aide de moment.js
    const breakLengthInMinutes = moment.duration(breakLengthInSeconds, "s").minutes(); 
 return (

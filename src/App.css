@@ -8,6 +8,7 @@ body{
   align-items: center;
   height: 100vh;
   padding: 70px;
+  overflow: hidden;
 
 }
 
@@ -29,17 +30,17 @@ h2{
   gap : 60px;
 }
 .break{
-  border: 8px solid #13353a;
+  border: 3px solid #13353a;
   border-radius: 20px;
   width: 320px;
   margin-left: auto;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 .session{
-  border: 8px solid #13353a;
+  border: 3px solid #13353a;
   border-radius: 20px;
   width: 320px;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
 }
 .timer{
@@ -75,6 +76,13 @@ h2{
 #session-increment{
   font-size: 50px;
 }
+/* bouton start/stop and refresh */
+#reset{
+  font-size: 50px;
+}
+#start_stop{
+  font-size: 50px;
+}
 
 /* valeur de la durée par défaut */
 #break-length{
@@ -83,6 +91,7 @@ h2{
 #session-length{
   font-size: 30px;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

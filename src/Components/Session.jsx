@@ -20,9 +20,9 @@ const Session = ({
         <div>
             <p id="session-label">Session Length</p>
             <div className='btn-style-session'> 
-            <i id="session-decrement" onClick={decrementSessionLengthByOneMinute}><BsFillArrowUpSquareFill /></i>
+            <i id="session-decrement" onClick={incrementSessionLengthByOneMinute}><BsFillArrowUpSquareFill /></i>
             <p id="session-length">{sessionLengthInMinutes}</p>
-            <i id="session-increment" onClick={incrementSessionLengthByOneMinute}><BsFillArrowDownSquareFill /></i>
+            <i id="session-increment" onClick={decrementSessionLengthByOneMinute}><BsFillArrowDownSquareFill /></i>
             </div> 
         </div>
     );

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Break from "./Components/Break";
 import Session from "./Components/Session";
 import TimeLeft from "./Components/TimeLeft";
-// import { useCountdownTimer } from 'use-countdown-timer';
+
 
 var conteur;
 function App() {
-  // initialisation de la durée de la pause à l'aide de react state (et useState)
+  // initialisation de la durée de la pause à l'aide de react useState
   let [sessionLengthInSeconds, setSessionLengthInSeconds] = useState(1500);
   // ajout bouton plus et moins avec des gestionnaires d'événements de clic
   const decrementSessionLengthByOneMinute = () => {
@@ -111,9 +111,7 @@ function App() {
             incrementSessionLengthByOneMinute={
               incrementSessionLengthByOneMinute
             }
-            decrementSessionLengthByOneMinute={
-              decrementSessionLengthByOneMinute
-            }
+            decrementSessionLengthByOneMinute={decrementSessionLengthByOneMinute}
           />
         </div>
       </div>

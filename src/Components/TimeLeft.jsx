@@ -4,6 +4,7 @@ import React from "react";
 // import Countdown from 'react-countdown';
 // import { useState } from 'react';
 import { AiOutlinePlayCircle } from "react-icons/ai";
+import {FiPauseCircle} from "react-icons/fi"
 import { BiRefresh } from "react-icons/bi";
 
 momentDurationFormatSetup(moment);
@@ -25,15 +26,13 @@ const TimeLeft = ({
   return (
     <div>
       <h2 id="timer-label">Session</h2>
-      <button id="pause" onClick={pause}> Pause </button>
       <p id="time-left">{formattedTimeLeft}</p>
-      <i id="start_stop" onClick={timer}>
-        <AiOutlinePlayCircle />
-      </i>
+      <i id="start" onClick={timer}><AiOutlinePlayCircle /></i>
+      <i id="stop" onClick={pause}><FiPauseCircle /> </i>
       <i id="reset" onClick={refresh}>
         <BiRefresh />
       </i>
-      <p id="time-left">{sessionLengthInSeconds}</p>
+     
       
       {/* 
     // timer

@@ -80,7 +80,10 @@ h2{
 #reset{
   font-size: 50px;
 }
-#start_stop{
+#start{
+  font-size: 50px;
+}
+#stop {
   font-size: 50px;
 }
 
